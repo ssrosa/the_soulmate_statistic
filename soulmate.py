@@ -87,7 +87,7 @@ def clean(raw_script):
     #Split the script into a list of lines of dialogue.
     split_script = cleaned_script.split('<br/>')
     #Turn the lines into tuples to record the numbering.
-    tupled_script = [(i, line) for i, line in enumerate(split_script)]
+    tupled_script = [(i, line.lstrip()) for i, line in enumerate(split_script)]
     return tupled_script
 
 #Helper function for clean()
